@@ -1,0 +1,16 @@
+{
+	"files": ["app/scripts/main.ts"],
+	"include": ["app/scripts/*.ts"],
+	"exclude": ["node_modules", "**/*.spec.ts"],
+	"compilerOptions": {
+		"target": "es2015",
+		"module": "es2020",
+		"lib": ["es2018", "dom"],
+		"sourceMap": true,
+		"declaration": false,
+		"downlevelIteration": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"importHelpers": true
+	}
+}
