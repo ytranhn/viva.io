@@ -1,5 +1,4 @@
 import { src, dest } from 'gulp';
-import { throwError } from 'rxjs';
 import { readVendors } from '../utils/vendors';
 
 export const copyFavicon = () => {

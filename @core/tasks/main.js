@@ -1,4 +1,4 @@
-import { isProduction } from './helpers';
+import { isProduction } from '../utils/helpers';
 import { src, dest, series } from 'gulp';
 import sass from 'gulp-sass';
 import cleanCss from 'gulp-clean-css';
