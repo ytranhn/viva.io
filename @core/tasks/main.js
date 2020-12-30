@@ -10,101 +10,63 @@ import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import gulpif from 'gulp-if';
 import plumber from 'gulp-plumber';
-import babel from 'gulp-babel';
-import tsify from 'tsify';
-import uglify from 'gulp-uglify';
+import babelify from 'babelify';
 import browserify from 'browserify';
 import buffer from 'vinyl-buffer';
 import source from 'vinyl-source-stream';
-import Watchify from 'watchify';
-import fancy_log from 'fancy-log';
 const terser = require('gulp-terser');
 
 export const cssTask = () => {
 	return new Promise((resolve, reject) => {
 		src(['./app/styles/**.scss', '!app/styles/_*.scss'])
 			.pipe(gulpif(!isProduction(), sourcemaps.init()))
+			.pipe(sass({ fiber: Fiber }).on('error', sass.logError))
 			.pipe(
-				sass({
-					fiber: Fiber,
-				}).on('error', sass.logError),
-			)
-			.pipe(
-				cleanCss({
-					level: {
-						1: {
-							all: true,
-							normalizeUrls: false,
-							specialComments: false,
+				gulpif(
+					isProduction(),
+					cleanCss({
+						level: {
+							1: {
+								all: true,
+								normalizeUrls: false,
+								specialComments: false,
+							},
+							2: {
+								restructureRules: true,
+							},
 						},
-						2: {
-							restructureRules: true,
-						},
-					},
-				}),
-			)
-			.pipe(
-				postcss([
-					autoprefixer({
-						cascade: false,
 					}),
-					cssnano(),
-				]),
-				postcss([
-					autoprefixer({
-						cascade: false,
-					}),
-				]),
+				),
 			)
-			.pipe(
-				rename({
-					suffix: '.min',
-				}),
-			)
+			.pipe(postcss([autoprefixer({ cascade: false })]))
+			.pipe(gulpif(isProduction(), postcss([cssnano()])))
+			.pipe(rename({ suffix: '.min' }))
 			.pipe(gulpif(!isProduction(), sourcemaps.write('.')))
 			.pipe(dest('./_dist/css'));
 		resolve();
 	});
 };
 
-export const tsCompile = Watchify(
-	browserify({
+export const jsTask = () => {
+	return browserify({
 		basedir: '.',
+		entries: ['./app/scripts/main.js'],
 		debug: true,
-		entries: ['./app/scripts/main.ts'],
-		cache: {},
-		packageCache: {},
+		sourceMaps: true,
 	})
-		.plugin(tsify, { target: 'es5' })
-		.transform('babelify', {
-			presets: ['@babel/preset-env'],
-			plugins: [
-				'@babel/plugin-proposal-class-properties',
-				'@babel/plugin-transform-classes',
-				'@babel/plugin-transform-async-to-generator',
-			],
-			extensions: ['.ts'],
-		}),
-);
-
-export const tsBundle = () => {
-	return tsCompile
+		.transform(
+			babelify.configure({
+				presets: ['@babel/preset-env'],
+				plugins: [
+					'@babel/plugin-proposal-class-properties',
+					'@babel/plugin-transform-async-to-generator',
+				],
+				extensions: ['.js'],
+			}),
+		)
 		.bundle()
-		.on('error', fancy_log)
-		.pipe(source('main.min.js'))
+		.pipe(source('main.js'))
 		.pipe(buffer())
-		.pipe(gulpif(!isProduction(), sourcemaps.init({ loadMaps: true })))
-		.pipe(terser())
-		.pipe(gulpif(!isProduction(), sourcemaps.write('./')))
-		.pipe(dest('./_dist/js'));
-};
-
-tsCompile.on('update', tsBundle);
-tsCompile.on('log', fancy_log);
-
-export const TranspileJavascriptBabel = (filePathnameGlob) => {
-	console.log(`Transpiled file ${filePathnameGlob}`);
-	return src(filePathnameGlob)
 		.pipe(
 			plumber(function (err) {
 				console.log(err);
@@ -112,18 +74,14 @@ export const TranspileJavascriptBabel = (filePathnameGlob) => {
 			}),
 		)
 		.pipe(gulpif(!isProduction(), sourcemaps.init({ loadMaps: true })))
-		.pipe(isProduction(), babel())
-		.pipe(isProduction(), uglify())
+		.pipe(gulpif(isProduction(), terser()))
 		.pipe(
 			rename({
 				suffix: '.min',
 			}),
 		)
 		.pipe(gulpif(!isProduction(), sourcemaps.write('./')))
-		.pipe(dest('./_dist/js'));
+		.pipe(dest('_dist/js'));
 };
 
-export const JsBabel = () => {
-	return TranspileJavascriptBabel('./app/scripts/**.js');
-};
-export const main = series(cssTask, tsBundle);
+export const main = series(cssTask, jsTask);

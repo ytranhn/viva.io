@@ -1,6 +1,7 @@
 import { src, dest, series } from 'gulp';
 import pug from 'gulp-pug';
 import plumber from 'gulp-plumber';
+import { injectTask } from './inject';
 
 export const renderHTML = (glob) => {
 	return src(glob)
@@ -22,4 +23,4 @@ export const html = () => {
 	return renderHTML('./app/**.pug');
 };
 
-export const render = series(html);
+export const render = series(html, injectTask);

@@ -11,8 +11,9 @@ html(lang="en")
 	body
 		block header
 			include header
-		main(class=bodyClass)
+		main
 			block main
+			#page-verify(data-class=bodyClass)
 		block footer
 			include footer
 		block js

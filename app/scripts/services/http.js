@@ -1,17 +1,10 @@
 import { of } from 'rxjs';
-import { Observable } from 'rxjs';
 import { fromFetch } from 'rxjs/fetch';
 import { switchMap, catchError } from 'rxjs/operators';
 
-export interface HttpResponse {
-	codeStatus?: number;
-	message?: string;
-	data: any;
-}
-
 export class HttpRequest {
 	constructor() {}
-	get(url: string): Observable<HttpResponse> {
+	get(url) {
 		return fromFetch(url).pipe(
 			switchMap((response) => {
 				if (response.ok) {

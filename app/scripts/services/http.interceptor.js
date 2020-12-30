@@ -1,5 +1,7 @@
 import { HttpRequest } from './http';
 
 export default class HttpInterceptor {
-	constructor(private http: HttpRequest) {}
+	constructor(http) {
+		console.log(1231231);
+	}
 }

@@ -1,11 +1,12 @@
-import { watch, series, parallel, src, dest } from 'gulp';
+import { watch, series, src, dest } from 'gulp';
 import bSync from 'browser-sync';
 import del from 'del';
 import compression from 'compression';
 import { copyFonts } from './copy';
 import { renderHTML } from './render';
-import { cssTask, TranspileJavascriptBabel } from './main';
+import { cssTask, jsTask } from './main';
 import { jsCore, cssCore } from './core';
+import { injectTask } from './inject';
 
 const imageChangeTask = (path, stats) => {
 	const filePathnameGlob = path.replace(/[\/\\]/g, '/');
@@ -36,13 +37,16 @@ export const serve = () => {
 		},
 		port: 8000,
 	});
-	watch('app/views/_**/**.pug').on('change', (path, stats) => {
-		console.log(`Files changed: '${path}'`);
-		console.log(`Rendering: All templates`);
-		return renderHTML('./app/**.pug');
-	});
+	watch('app/views/_**/**.pug', series(injectTask)).on(
+		'change',
+		(path, stats) => {
+			console.log(`Files changed: '${path}'`);
+			console.log(`Rendering: All templates`);
+			return renderHTML('./app/**.pug');
+		},
+	);
 
-	watch(['app/*.pug']).on('change', (path, stats) => {
+	watch(['app/*.pug'], series(injectTask)).on('change', (path, stats) => {
 		console.log(`Files changed: '${path}'`);
 		let pageName;
 		let glob;
@@ -92,10 +96,7 @@ export const serve = () => {
 		.on('unlink', imageRemoveTask)
 		.on('unlinkDir', imageRemoveTask);
 
-	watch(['./app/scripts/**.js']).on('change', (path, stats) => {
-		const filePathnameGlob = path.replace(/[\/\\]/g, '/');
-		return TranspileJavascriptBabel(filePathnameGlob);
-	});
+	watch(['./app/scripts/**/**.js'], series(jsTask));
 
 	watch(
 		['app/styles/**/**.scss'],
