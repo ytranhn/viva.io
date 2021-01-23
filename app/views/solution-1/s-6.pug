@@ -1,0 +1,15 @@
+.solution-1--6.pt-section.solution-section
+	.container
+		.section__blockTitle.text-center
+			h2.sectionTitle Solution application scenarios
+		.solution-1--6__caption.solution-1--6__slider
+			.swiper-container
+				.swiper-wrapper
+					- for(let i = 1;i <8;i++)
+						.swiper-slide
+							img(src="/images/solutions/slide-"+i+".png", alt="")
+			.swiper-prev--custom.swiper-nav-button
+				span.fal.fa-chevron-left
+			.swiper-next--custom.swiper-nav-button
+				span.fal.fa-chevron-right
+			.swiper-pagination-custom

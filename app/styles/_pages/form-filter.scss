@@ -1,0 +1,4 @@
+.section__form {
+	border-bottom: 1px solid darken(map-get($color, white), 12%);
+	@include form-search();
+}

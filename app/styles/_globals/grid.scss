@@ -31,17 +31,17 @@
 	}
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1360px) {
 	.container {
-		max-width: 1360px;
+		max-width: 1250px;
 	}
 }
 
-@media (min-width: 1600px) {
-	.container {
-		max-width: 1460px;
-	}
-}
+// @media (min-width: 1600px) {
+// 	.container {
+// 		max-width: 1460px;
+// 	}
+// }
 
 .row {
 	display: -ms-flexbox;

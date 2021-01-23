@@ -1,0 +1,112 @@
+.contact-section {
+	.tab-toggle-item-list {
+		@media (max-width: 767.98px) {
+			display: flex;
+			overflow-x: auto;
+		}
+	}
+	.tab-toggle-for {
+		cursor: pointer;
+		border-bottom: 1px solid darken(map-get($color, white), 12%);
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		.img {
+			-ms-flex: 0 0 auto;
+			flex: 0 0 auto;
+			width: auto;
+			max-width: 100%;
+			position: relative;
+			z-index: 2;
+			svg {
+				circle {
+					fill: map-get($color, white);
+				}
+				circle,
+				path {
+					transition: all 0.3s ease;
+				}
+			}
+			@media (max-width: 767.98px) {
+				display: none;
+			}
+		}
+		.caption {
+			-ms-flex-preferred-size: 0;
+			flex-basis: 0;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			max-width: 100%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			transition: all 0.3s ease;
+			@media (min-width: 768px) {
+				margin-left: -50px;
+				padding-left: 70px;
+			}
+			@media (max-width: 767.98px) {
+				padding: 10px 15px;
+				p {
+					white-space: nowrap;
+				}
+			}
+		}
+		&.active,
+		&:hover {
+			.img {
+				svg {
+					path {
+						fill: map-get($color, white);
+					}
+					circle {
+						fill: map-get($color, main);
+					}
+				}
+			}
+			.caption {
+				background-color: darken(map-get($color, white), 6%);
+			}
+		}
+		@media (max-width: 767.98px) {
+			padding-bottom: 0;
+			min-width: 25%;
+		}
+	}
+	.contact-form-message {
+		max-width: 500px;
+		textarea.form__control {
+			height: 120px;
+		}
+		.checkbox--custom {
+			span {
+				color: map-get($color, text);
+				&:before {
+					border: 1px solid map-get($color, text);
+					color: map-get($color, text);
+				}
+			}
+		}
+		.btn--main {
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+	}
+	.attendance-item {
+		a {
+			color: map-get($color, main);
+			font-weight: 500;
+			display: inline-block;
+			margin-top: 10px;
+			font-size: 18px;
+			span {
+				margin-left: 10px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	@include form-search();
+}
+.contact-section--border-top {
+	border-top: 1px solid darken(map-get($color, white), 12%);
+}

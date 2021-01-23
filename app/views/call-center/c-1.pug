@@ -1,0 +1,179 @@
+.form-filter-simple-banner.contact-simple-banner
+	.img
+		img.object-cover(src="/images/banners/form-filter.png")
+	.caption.text-center
+		.container
+			h1.fs-22.fw-300 Contact
+			p.fs-20.mt-1 We are here to help you, contact us.
+.contact-section.pd-section
+	.container
+		.row.tab-container
+			.col-md-3
+				.tab-toggle-item-list
+					.tab-toggle-for(toggle-for="tab-1")
+						.d-flex.align-items-center
+							.img
+								+svg("/images/message.svg")
+							.caption
+								p.fs-16 Message
+					.tab-toggle-for(toggle-for="tab-2")
+						.d-flex.align-items-center
+							.img
+								+svg("/images/attendance.svg")
+							.caption
+								p.fs-16 Attendance
+					.tab-toggle-for(toggle-for="tab-3")
+						.d-flex.align-items-center
+							.img
+								+svg("/images/chat.svg")
+							.caption
+								p.fs-16 Chat online
+					.tab-toggle-for(toggle-for="tab-4")
+						.d-flex.align-items-center
+							.img
+								+svg("/images/technical.svg")
+							.caption
+								p.fs-16 Technical Support
+			.col-md-1
+			.col-md-8
+				.tab-content(tab-id="tab-1")
+					h2.fs-32.fw-300.mb-3 Send your message
+					form.contact-form-message
+						.row
+							.form__group.col-sm-12.mb-3
+								input.form__control(placeholder="Fullname")
+							.form__group.col-sm-12.mb-3
+								input.form__control(placeholder="Type your email")
+							.form__group.col-sm-6.mb-3
+								input.form__control(placeholder="CPF/CNPJ")
+							.form__group.col-sm-6.mb-3
+								select.form__control
+									option Sector
+									option Value 1
+									option Value 1
+									option Value 1
+									option Value 1
+									option Value 1
+							.form__group.col-sm-6.mb-3
+								input.form__control(placeholder="CEP/Zip code")
+							.form__group.col-sm-6.mb-3
+								select.form__control
+									option Parents
+									option Value 1
+									option Value 1
+									option Value 1
+									option Value 1
+									option Value 1
+							.form__group.col-sm-8.mb-3
+								input.form__control(placeholder="City")
+							.form__group.col-sm-4.mb-3
+								select.form__control
+									option State
+									option Value 1
+									option Value 1
+									option Value 1
+									option Value 1
+									option Value 1
+							.form__group.col-sm-12.mb-4
+								input.form__control(placeholder="Subject matter")
+							.form__group.col-sm-12.mb-3
+								label.form__label Message
+								textarea.form__control(placeholder="Subject matter")
+							.form__group.col-sm-12.mb-3
+								label.checkbox--custom
+									input(type="checkbox", name="TermAgree")
+									span I agree to send my data to Intelbras to return the contact message.
+							.form__group.col-sm-12
+								button.btn.btn--main Submit
+									span.btn__icon--right.fal.fa-chevron-right
+				.tab-content(tab-id="tab-2")
+					p.fs-16 In order to be served more quickly, please contact us during low-traffic times, that is, in the early morning, at lunchtime between 12pm-2pm or after 6:30 pm.
+					.mt-4
+						.attendance-item.mb-4
+							p.fs-20.fw-500.mb-2 Indication of resellers and distributors to purchase products
+							p.fs-18
+								span 0800 724 5115 
+								br
+								span Monday to Friday: 08:00 to 20:00
+								br
+								span Saturday: 08:00 to 14:00
+						.attendance-item.mb-4
+							p.fs-20.fw-500.mb-2 Contact the Company
+							p.fs-18
+								span (48) 3281 9500 
+								br
+								span Monday to Friday: 08:00 to 17:30
+						.attendance-item.mb-4
+							p.fs-20.fw-500.mb-2 Training information - iTEC
+							p.fs-18
+								span (48) 3281 9529 
+								br
+								span Monday to Thursday: 08:00 to 17:00
+								br
+								span Friday: 08:00 to 16:00
+							a(href="#") Access the website
+								span.fal.fa-external-link-alt
+						.attendance-item.mb-4
+							p.fs-20.fw-500.mb-2 Suggestions, complaints and authorized network
+							p.fs-18
+								span 0800 704 2767 
+								br
+								span Monday to Friday: 08:00 to 20:00
+								br
+								span Saturday: 08:00 to 14:00
+						.attendance-item.mb-4
+							p.fs-20.fw-500.mb-2 Technical support
+							p.fs-18
+								span (48) 2106 0006  
+								br
+								span Monday to Friday: 08:00 to 20:00
+								br
+								span Saturday: 08:00 to 18:00
+							a(href="#") See our regional 
+								span.fal.fa-external-link-alt
+				.tab-content(tab-id="tab-3")
+				.tab-content(tab-id="tab-4")
+					h2.fs-32.fw-300.mb-3 Technical support
+					p.fs-16 Use the fields below to list the technical support phones in your region. Select the product model that needs support and click continue.
+					form.contact-form-message
+						.form__search.mt-4
+							.form__group
+								input.form__control(placeholder="Enter product name")
+							button.btn
+								span.far.fa-search
+						p.my-4.fs-18.text-center Or
+						.form__group.mb-3
+							select.form__control
+								option What kinds of product?
+								option Value 1
+								option Value 1
+								option Value 1
+								option Value 1
+								option Value 1
+						.form__group.mb-3
+							select.form__control
+								option Which category?
+								option Value 1
+								option Value 1
+								option Value 1
+								option Value 1
+								option Value 1
+						.form__group.mb-3
+							select.form__control
+								option Which sub category?
+								option Value 1
+								option Value 1
+								option Value 1
+								option Value 1
+								option Value 1
+						.form__group.mb-3
+							select.form__control
+								option Which product?
+								option Value 1
+								option Value 1
+								option Value 1
+								option Value 1
+								option Value 1
+						.form__group
+							button.btn.btn--main Continue
+								span.btn__icon--right.fal.fa-chevron-right

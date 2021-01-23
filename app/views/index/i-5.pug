@@ -1,0 +1,57 @@
+.indexSection.pt-section.indexSection--5
+	.container
+		.row
+			.col-lg-6
+				.section__blockTitle
+					h2.sectionTitle.text-left Blog
+					a.sectionLink(href="#") 
+						span.sectionLink__text Visit our blog
+						span.sectionLink__icon.fal.fa-chevron-right
+				.section__blogs.mt-3
+					.row
+						.col-sm-6
+							.blog.mb-4
+								a.blog__link(href="blog-detail.html")
+									.blog__img
+										img.lazyload.blur-up(data-src="/images/blogs/1.jpg", alt="")
+									.blog__caption.mt-2
+										h4.cardTitle Vacation Security: Know How to Keep Your Home Protected
+										p.blog__button.mt-1.fs-16 Read Article
+											span.fal.fa-external-link-alt
+						.col-sm-6
+							.blog.mb-4
+								a.blog__link(href="blog-detail.html")
+									.blog__img
+										img.lazyload.blur-up(data-src="/images/blogs/1.jpg", alt="")
+									.blog__caption.mt-2
+										h4.cardTitle Vacation Security: Know How to Keep Your Home Protected
+										p.blog__button.mt-1.fs-16 Read Article
+											span.fal.fa-external-link-alt
+			.col-lg-6
+				form.section__form
+					.form__img
+						+svg("/images/envelope.svg")
+					h4.mt-2.fw-300.form__title Receive our content
+					.form__group.mt-1
+						label.form__label Fullname
+						input.form__control(type="text", name="Fullname" placeholder="Type your fullname")
+						span.form__error Field is required!
+					.form__group.mt-1
+						label.form__label Email
+						input.form__control(type="text", name="Email" placeholder="Type your e-mail")
+						span.form__error Field is required!
+					.form__group.mt-1
+						label.form__label Your relationship with us
+						select.form__control(type="text", name="Fullname")
+							option Choose your relationship
+							option Lorem ipsum lorem
+							option Lorem ipsum lorem
+							option Lorem ipsum lorem
+							option Lorem ipsum lorem
+							option Lorem ipsum lorem
+						span.form__error Field is required!
+					.form__group.mt-1
+						label.checkbox--custom
+							input(type="checkbox", name="TermAgree")
+							span I agree to receive news and news from Intelbras. I agree to the terms of our 
+								a(href="") Privacy Policy

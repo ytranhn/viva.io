@@ -1,0 +1,20 @@
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Spain</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1___fpaQMOml" cx="16" cy="16" r="16"></circle>
+    </defs>
+    <g id="Symbols___fpaQMOml" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Spain___fpaQMOml">
+            <g>
+                <mask id="mask-2___fpaQMOml" fill="white">
+                    <use xlink:href="#path-1___fpaQMOml"></use>
+                </mask>
+                <use id="Oval-1___fpaQMOml" fill="#FFC400" xlink:href="#path-1___fpaQMOml"></use>
+                <polygon id="Fill-1___fpaQMOml" fill="#C60B1E" mask="url(#mask-2___fpaQMOml)" points="-9.62631111 -2.3378963 42.0408889 -2.3378963 42.0408889 8.84645926 -9.62631111 8.84645926"></polygon>
+                <polygon id="Fill-3___fpaQMOml" fill="#C60B1E" mask="url(#mask-2___fpaQMOml)" points="-9.62631111 23.1108741 42.0408889 23.1108741 42.0408889 34.6159407 -9.62631111 34.6159407"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

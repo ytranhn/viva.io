@@ -77,11 +77,11 @@
 .fa-chevron-right:before {
 	content: '\f054';
 }
-.fa-bars:before {
-	content: '\f0c9';
-}
 .fa-chevron-down:before {
 	content: '\f078';
+}
+.fa-bars:before {
+	content: '\f0c9';
 }
 .fa-home-lg-alt:before {
 	content: '\f80c';
@@ -140,7 +140,9 @@
 .fa-plus-square:before {
 	content: '\f0fe';
 }
-
+.fa-times-circle:before {
+	content: '\f057';
+}
 .fa-pinterest-p::before {
 	content: '\f231';
 }

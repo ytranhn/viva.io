@@ -1,0 +1,44 @@
+.form-filter-simple-banner.about-us-simple-banner
+	.img
+		img.object-cover(src="/images/banners/about-events.jpg")
+	.caption.text-center
+		.container
+			h1.fs-22.fw-300 Events
+			p.fs-20.mt-1 Always close to care, connect, communicate and transform
+
+.about-us-institutional-section.pd-section
+	.container
+		.row
+			.col-md-4
+				.about-nav-container
+					h2.fs-22.fw-300.mb-4 Filter By
+					.about-us-nav-item
+						span.fs-18 Events
+					hr.my-3
+					.about-us-nav-item
+						span.fs-18 Events Calendar
+					input.date-picker.form__control.mt-2(type="text")
+				.about-subscribe.pt-section
+					form.about-subscribe__form
+						.form__img
+							+svg("/images/envelope.svg")
+						h4.my-2.fw-300.fs-22 Subscribe to our newsletter
+						.form__group.mb-2
+							input.form__control(type="text", name="Fullname" placeholder="Email")
+							span.form__error Field is required!
+						.form__group.mb-3
+							label.checkbox--custom
+								input(type="checkbox", name="TermAgree")
+								span I agree to receive news and news from Intelbras. I agree with the terms of our 
+									a(href="#") Privacy Policy
+						.form__group
+							button.btn.btn--main Register
+								span.btn__icon--right.fal.fa-chevron-right
+			.col-md-8
+				.about-event-header
+					p.fs-16 0 Events
+					.form__search
+						.form__group
+							input.form__control(placeholder="Enter product name")
+						button.btn
+							span.far.fa-search

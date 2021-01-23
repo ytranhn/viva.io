@@ -1,2 +1,138 @@
-footer
-	h1 This is footer
+footer.footer
+	.footer__help.py-4
+		.container
+			.row.align-items-center.justify-content-center
+				.col-md-auto
+					p.fs-20.fw-300.footer__helpTitle You need help?
+				.col-md-9
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.card
+									a.card__url(href="#")
+										.card__img
+											img.fullsize(src="/images/find.svg")
+										.card__caption
+											h4.fs-16.fw-300 Find Technical Assistance
+												span.fal.fa-chevron-right
+							.swiper-slide
+								.card
+									a.card__url(href="#")
+										.card__img
+											img.fullsize(src="/images/download.svg")
+										.card__caption
+											h4.fs-16.fw-300 Downloads, settings and video tutorials
+												span.fal.fa-chevron-right
+							.swiper-slide
+								.card
+									a.card__url(href="#")
+										.card__img
+											img.fullsize(src="/images/contact.svg")
+										.card__caption
+											h4.fs-16.fw-300 Contact the support center
+												span.fal.fa-chevron-right
+					.swiper-pagination-custom
+	.pd-section
+		.container
+			.footer__extra-menus.pb-1
+				.row.justify-content-space-between
+					.col-lg.col-md-4.col-6.mb-3
+						.mb-2
+							h6.fw-600.fs-18 Customer support
+						ul.footer__nav
+							li
+								a(href='/pt-br/contato/suporte-tecnico/') Technical support
+							li
+								a(href='/pt-br/onde-encontrar/assistencia-tecnica/') Technical assistance
+							li
+								a(href='http://forum.intelbras.com.br/' target='_blank' rel='noopener') Forum
+					.col-lg.col-md-4.col-6.mb-3
+						.mb-2
+							h6.fw-600.fs-18 Contact us
+						ul.footer__nav
+							li
+								a(href='/pt-br/contato/mensagem/') Contact us
+							li
+								a(href='/pt-br/contato/atendimento/') Call center
+							li
+								a(href='/pt-br/parceiros' target='_blank') Commercial
+							li
+								a(href='/pt-br/institucional/descarte-de-produto') Product Disposal
+							li
+								a(href='/pt-br/canal-de-denuncia' target='_blank') Reporting Channel
+					.col-lg.col-md-4.col-6.mb-3
+						.mb-2
+							h6.fw-600.fs-18 About Us
+						ul.footer__nav
+							li
+								a(href='/pt-br/institucional/quem-somos') Who we are
+							li
+								a(href='/pt-br/carreiras') Work with us
+							li
+								a(href='/pt-br/visite-intelbras') Visit Intelbras
+							li
+								a(href='/pt-br/noticias') News
+							li
+								a(href='/pt-br/institucional/responsabilidade-social') Social responsability
+							li
+								a(href='/pt-br/eventos') Events
+							li
+								a(href='/pt-br/institucional/onde-estamos') Location
+					.col-lg.col-md-4.col-6.mb-3
+						.mb-2
+							h6.fw-600.fs-18 See also
+						ul.footer__nav
+							li
+								a(href='/pt-br/parceiros') Channel Program
+							li
+								a(href='http://www.keo.com.br/' target='_blank' rel='noopener') KEO
+							li
+								a(href='http://www.intelbrascloud.com.br/' target='_blank' rel='noopener') Intelbras Cloud
+							li
+								a(href='https://treinamentos.intelbras.com.br' target='_blank' rel='noopener') iTEC Training
+							li
+								a(href='https://loja.intelbras.com.br' target='_blank' rel='noopener') Shop intelbras
+							li
+								a(href='http://mibo.intelbras.com.br/?utm_source=rodape-site-intelbras&utm_medium=rodape-site-intelbras&utm_campaign=rodape-site-intelbras-mibo' target='_blank' rel='noopener') Mibo Line
+							li
+								a(href='https://www.intelbras.com/pt-br/fechadura-digital?utm_source=site-intelbras&utm_medium=rodape-site-intelbras&utm_campaign=rodape-site-intelbras-fechadura-digital') Digital lock
+							li
+								a(href='/pt-br/wi-fi-mesh?utm_source=rodape-site-intelbras&utm_medium=rodape-site-intelbras&utm_campaign=rodape-site-intelbras-wi-fi-mesh') Twibi Mesh
+					.col-md-auto
+						.block-social-networks
+							.mb-2
+								h6.fw-600.fs-18 Our social networks
+							ul.footer__nav
+								li
+									a(href='https://www.facebook.com/Intelbras/' target='_blank' rel='noopener')
+										+svg('/images/facebook.svg')
+										span.fw-300.ml-1 Facebook
+								li
+									a(href='https://www.youtube.com/IntelbrasBR' target='_blank' rel='noopener')
+										+svg('/images/youtube.svg')
+										span.fw-300.ml-1 Youtube
+								li
+									a(href='https://www.linkedin.com/company/intelbras/' target='_blank' rel='noopener')
+										+svg('/images/linkedin.svg')
+										span.fw-300.ml-1 Linkedin
+								li
+									a(href='https://www.instagram.com/intelbras/' target='_blank' rel='noopener')
+										+svg('/images/instagram.svg')
+										span.fw-300.ml-1 Instagram
+								li
+									a(href='https://twitter.com/intelbras' target='_blank' rel='noopener')
+										+svg('/images/twitter.svg')
+										span.fw-300.ml-1 Twitter
+			.footer__extra-infos.pt-1
+				ul.footer__nav.justify-content-center
+					li
+						a(href='/pt-br/mapa-do-site').fw-300 Site map
+					li
+						a(target='_blank' href='/pt-br/politica-de-privacidade').fw-300 Privacy policy
+					li
+						a(href='https://www.bndes.gov.br/wps/portal/site/home' target='_blank' rel='noopener').fw-300 BNDES
+					li
+						a(href='http://www.finep.gov.br/' target='_blank' rel='noopener').fw-300 FINEP
+				.footer__extra-infos__meta.mt-1.text-center
+					p.fw-300 Copyright Intelbras 2018. All rights reserved
+					

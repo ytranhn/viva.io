@@ -1,0 +1,107 @@
+.productSubCategories.pd-section
+	.container
+		.row
+			.col-lg-3.col-md-4.mb-4.productList__filterCol
+				.productList__filter.pb-1
+					.productList__filterClose
+						span.fal.fa-times
+					h4.fs-20.fw-300.mb-3 Filter By
+					.dropdown
+						.dropdown__label
+							p.dropdown__text Subcategory
+							span.dropdown__icon.fal.fa-chevron-down
+						.dropdown__list.py-2
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Storage
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Baluns
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Security Cables
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Junction box
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Connectors
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Controller table
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Extenders
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Tools
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Filters
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span For cameras
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span To mibo
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Microphones
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span HDMI Solutions
+							label.radio--custom
+								input(type="radio", name="Subcategory")
+								span Speed dome brackets
+					.productList__buttons.row.mt-2
+						.col-12
+							.btn.btn--main.productList__applyFilter
+								span Apply Filters
+								span.fal.fa-check
+						.col-12.mt-2
+							.btn.btn--alert.productList__clearFilter
+								span Clear all filters
+								span.fal.fa-times-circle
+			.col-lg-9.col-md-8
+				.productList__header
+					p.fw-300.fs-20 65 Products
+					.form__group.productList__sort
+						label.form__label Sorted by: 
+						select.form__control
+							option Name: A -> Z
+							option Name: Z -> A
+							option Price: Highest -> Lowest
+							option Price: Lowest -> Highest
+					.productList__filterIcon
+						span.fal.fa-filter
+				.productList__body.mt-4
+					.row
+						-for(let i =0;i< 12;i++)
+							.col-sm-6.col-xl-4.mb-3
+								.product.fullsize
+									a.product__url.fullsize(href="product-detail.html")
+										.product__img
+											img.lazyload.blur-up(data-src="/images/products/"+ ((i%8)+1) +'.png')
+										.product__caption
+											.product__colors
+												span(style="background-color: #000000")
+												span(style="background-color: #2b2")
+											p.product__subTitle.fs-16.mt-1 VEX 3060KM
+											h4.cardTitle.product__title.mt-1 KVM Extender (Video and Data)
+												span.fal.fa-chevron-right
+										.product__tags
+											span.product__tag.product__tag--new New
+				.pagination
+					ul.pagination__list
+						li.pagination__item
+							a.pagination__link(href="#")
+								span.fal.fa-chevron-left
+						li.pagination__item
+							a.pagination__link(href="#") 1
+						li.pagination__item
+							a.pagination__link(href="#") 2
+						li.pagination__item.active
+							a.pagination__link(href="#") 3
+						li.pagination__item
+							a.pagination__link(href="#")
+								span.fal.fa-chevron-right

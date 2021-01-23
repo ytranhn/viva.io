@@ -16,10 +16,15 @@
 	// 	"description": "Log output to console"
 	// }
 	// SCSS, CSS
-	"get-color": {
+	"get-variables": {
 		"scope": "css,less,scss",
 		"prefix": "va",
 		"body": ["var(--$0)"]
+	},
+	"get-style-varibales": {
+		"scope": "css,less,scss",
+		"prefix": "clg",
+		"body": ["map-get(\\$color, $0)"]
 	},
 	"media-up": {
 		"scope": "css,less,scss",

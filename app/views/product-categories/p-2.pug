@@ -1,0 +1,21 @@
+.productCategories.pt-section.productCategories--2
+	.container
+		.section__blockTitle
+			h2.sectionTitle Discover the product categories
+		.productCategories__slider.mt-4
+			.swiper-container
+				.swiper-wrapper
+					-for(let i= 1;i<9;i++)
+						.swiper-slide
+							.category
+								a.category__link(href="#")
+									.category__img
+										img(src="/images/product-categories/"+i+".png", alt="")
+									.category__caption.pt-2
+										h4.cardTitle Lorem ipsum dolor lorem
+											span.fal.fa-chevron-right
+			.swiper-prev--custom.swiper-nav-button
+				span.fal.fa-chevron-left
+			.swiper-next--custom.swiper-nav-button
+				span.fal.fa-chevron-right
+			.swiper-pagination-custom 

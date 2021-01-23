@@ -1,0 +1,70 @@
+.btn {
+	border-radius: 100px;
+	padding: 12px 25px;
+	white-space: nowrap;
+	display: inline-block;
+	line-height: 1.1em;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	.btn__icon {
+		&--right {
+			margin-left: 1.5rem;
+			font-size: 12px;
+		}
+		&--left {
+			margin-right: 1.5rem;
+			font-size: 12px;
+		}
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+}
+.btn--main {
+	background-color: map-get($color, main);
+	color: map-get($color, white);
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken(map-get($color, main), 5%);
+		color: map-get($color, white);
+	}
+}
+
+.btn--main--outline {
+	background-color: transparent;
+	color: map-get($color, main);
+	border: 1px solid map-get($color, main);
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken(map-get($color, main), 5%);
+		color: map-get($color, white);
+	}
+}
+
+.btn--alert {
+	background-color: map-get($color, alert);
+	color: map-get($color, white);
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken(map-get($color, alert), 5%);
+		color: map-get($color, white);
+	}
+}
+.btn--alert--outline {
+	background-color: transparent;
+	color: map-get($color, alert);
+	border: 1px solid map-get($color, alert);
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken(map-get($color, alert), 5%);
+		color: map-get($color, white);
+	}
+}

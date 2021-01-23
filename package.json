@@ -58,6 +58,10 @@
 	"dependencies": {
 		"bootstrap": "^4.5.3",
 		"jquery": "^3.5.1",
-		"rxjs": "^6.6.3"
+		"lazysizes": "^5.3.0",
+		"litepicker": "^1.5.7",
+		"rxjs": "^6.6.3",
+		"slick-carousel": "^1.8.1",
+		"swiper": "^6.4.5"
 	}
 }

@@ -1,0 +1,374 @@
+.clearfix:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+.d-none,
+[hidden] {
+	display: none !important;
+}
+.d-flex {
+	display: flex;
+}
+
+.fs-16 {
+	font-size: 1.6rem;
+}
+.fs-18 {
+	font-size: 1.8rem;
+}
+.fs-20 {
+	font-size: 2rem;
+}
+.fs-22 {
+	font-size: 2.2rem;
+}
+.fs-32 {
+	font-size: 3.2rem;
+}
+.fs-48 {
+	font-size: 4.8rem;
+}
+.fw-200 {
+	font-weight: 200;
+}
+.fw-300 {
+	font-weight: 300;
+}
+.fw-400 {
+	font-weight: 400;
+}
+.fw-500 {
+	font-weight: 500;
+}
+.fw-600 {
+	font-weight: 600;
+}
+.fw-700 {
+	font-weight: 700;
+}
+.fw-800 {
+	font-weight: 800;
+}
+.fw-900 {
+	font-weight: 900;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-justify {
+	text-align: justify;
+}
+.text-last-center {
+	text-align-last: center;
+}
+.text-underline {
+	text-decoration: underline;
+}
+.text-no-underline {
+	text-decoration: none;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-capitalize {
+	text-transform: capitalize;
+}
+.justify-content-center {
+	justify-content: center;
+}
+.justify-content-end {
+	justify-content: flex-end;
+}
+.justify-content-start {
+	justify-content: flex-start;
+}
+.align-items-center {
+	align-items: center;
+}
+.align-items-end {
+	align-items: flex-end;
+}
+.align-items-start {
+	align-items: flex-start;
+}
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.list-style-none {
+	list-style-type: none;
+}
+.fullsize {
+	width: 100%;
+	height: 100%;
+}
+.object-cover {
+	@extend .fullsize;
+	object-fit: cover;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.object-contain {
+	@extend .fullsize;
+	object-fit: contain;
+}
+.blur-up {
+	filter: blur(5px);
+	transition: filter 400ms, -webkit-filter 400ms;
+	&.lazyloaded {
+		filter: blur(0);
+	}
+}
+.pt-section {
+	padding-top: 30px;
+	@media (min-width: 768px) {
+		padding-top: 45px;
+	}
+	@media (min-width: 1200px) {
+		padding-top: 60px;
+	}
+}
+.pb-section {
+	padding-bottom: 30px;
+	@media (min-width: 768px) {
+		padding-bottom: 45px;
+	}
+	@media (min-width: 1200px) {
+		padding-bottom: 60px;
+	}
+}
+.pd-section {
+	@extend .pt-section;
+	@extend .pb-section;
+}
+
+.pt-0 {
+	padding-top: 0;
+}
+.pt-1 {
+	padding-top: 8px;
+}
+.pt-2 {
+	padding-top: 16px;
+}
+.pt-3 {
+	padding-top: 24px;
+}
+.pt-4 {
+	padding-top: 32px;
+}
+
+.pb-0 {
+	padding-bottom: 0;
+}
+.pb-1 {
+	padding-bottom: 8px;
+}
+.pb-2 {
+	padding-bottom: 16px;
+}
+.pb-3 {
+	padding-bottom: 24px;
+}
+.pb-4 {
+	padding-bottom: 32px;
+}
+
+.pl-0 {
+	padding-left: 0;
+}
+.pl-1 {
+	padding-left: 8px;
+}
+.pl-2 {
+	padding-left: 16px;
+}
+.pl-3 {
+	padding-left: 24px;
+}
+.pl-4 {
+	padding-left: 32px;
+}
+
+.pr-0 {
+	padding-right: 0;
+}
+.pr-1 {
+	padding-right: 8px;
+}
+.pr-2 {
+	padding-right: 16px;
+}
+.pr-3 {
+	padding-right: 24px;
+}
+.pr-4 {
+	padding-right: 32px;
+}
+
+.px-0 {
+	@extend .pl-0;
+	@extend .pr-0;
+}
+.px-1 {
+	@extend .pl-1;
+	@extend .pr-1;
+}
+.px-2 {
+	@extend .pl-2;
+	@extend .pr-2;
+}
+.px-3 {
+	@extend .pl-3;
+	@extend .pr-3;
+}
+.px-4 {
+	@extend .pl-4;
+	@extend .pr-4;
+}
+
+.py-0 {
+	@extend .pt-0;
+	@extend .pb-0;
+}
+.py-1 {
+	@extend .pt-1;
+	@extend .pb-1;
+}
+.py-2 {
+	@extend .pt-2;
+	@extend .pb-2;
+}
+.py-3 {
+	@extend .pt-3;
+	@extend .pb-3;
+}
+.py-4 {
+	@extend .pt-4;
+	@extend .pb-4;
+}
+
+.mt-0 {
+	margin-top: 0px;
+}
+.mt-1 {
+	margin-top: 8px;
+}
+.mt-2 {
+	margin-top: 16px;
+}
+.mt-3 {
+	margin-top: 24px;
+}
+.mt-4 {
+	margin-top: 32px;
+}
+
+.mb-0 {
+	margin-bottom: 0px;
+}
+.mb-1 {
+	margin-bottom: 8px;
+}
+.mb-2 {
+	margin-bottom: 16px;
+}
+.mb-3 {
+	margin-bottom: 24px;
+}
+.mb-4 {
+	margin-bottom: 32px;
+}
+
+.ml-0 {
+	margin-left: 0px;
+}
+.ml-1 {
+	margin-left: 8px;
+}
+.ml-2 {
+	margin-left: 16px;
+}
+.ml-3 {
+	margin-left: 24px;
+}
+.ml-4 {
+	margin-left: 32px;
+}
+
+.mr-0 {
+	margin-right: 0px;
+}
+.mr-1 {
+	margin-right: 8px;
+}
+.mr-2 {
+	margin-right: 16px;
+}
+.mr-3 {
+	margin-right: 24px;
+}
+.mr-4 {
+	margin-right: 32px;
+}
+
+.mx-0 {
+	@extend .ml-0;
+	@extend .mr-0;
+}
+.mx-1 {
+	@extend .ml-1;
+	@extend .mr-1;
+}
+.mx-2 {
+	@extend .ml-2;
+	@extend .mr-2;
+}
+.mx-3 {
+	@extend .ml-3;
+	@extend .mr-3;
+}
+.mx-4 {
+	@extend .ml-4;
+	@extend .mr-4;
+}
+
+.my-0 {
+	@extend .mt-0;
+	@extend .mb-0;
+}
+.my-1 {
+	@extend .mt-1;
+	@extend .mb-1;
+}
+.my-2 {
+	@extend .mt-2;
+	@extend .mb-2;
+}
+.my-3 {
+	@extend .mt-3;
+	@extend .mb-3;
+}
+.my-4 {
+	@extend .mt-4;
+	@extend .mb-4;
+}
+
+.fade-in {
+	animation: fadeIn ease 3s;
+	-webkit-animation: fadeIn ease 3s;
+	-moz-animation: fadeIn ease 3s;
+	-o-animation: fadeIn ease 3s;
+	-ms-animation: fadeIn ease 3s;
+}

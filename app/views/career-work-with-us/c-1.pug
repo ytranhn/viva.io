@@ -1,0 +1,76 @@
+.indexSection.page-banner-1
+	.container
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					.indexBanner
+						.banner__img
+							img.object-cover.lazyload.blur-up(data-src='/images/banners/1.png' alt='')
+						.banner__caption.fullsize
+							.banner__content.clearfix
+								h2.fw-300 Come be MORE with us
+								//- .mt-1
+								//- 	span.fw-300 And we anticipate tomorrow!
+								//- .mt-2
+								//- 	a.btn.btn--main(href='https://youtu.be/vXgzLqlGZuY')
+								//- 		span.btn__text Discover the new Intelbras campaign!
+								//- 		span.btn__icon--right.fal.fa-chevron-right
+		.swiper-pagination-custom
+.career-work-with-us-section.pt-section
+	.container
+		.text-center
+			p.fs-16 We are more than 4 thousand people who make Intelbras, every day, one of the best companies to work for, and who know that evolution is constant because it is part of our essence:
+			p.fs-16.fw-500.mt-2 Always be more intelligent, innovative, inclusive, instructive, inspiring.
+			p.fs-16.mt-2 Always be more Intelbras.
+			.mt-2
+				a.btn.btn--main--outline(href="#") Be part of this team
+			p.fs-16.mt-4 We are one of the best companies to work for in Brazil and we are very proud of that. We develop innovative technologies to make life easier for millions of people in their homes, businesses or condominiums, always offering the best solutions in security, access control, networks, communication, energy and solar energy. And we have opportunities for you who want to be part of #TimeIntelbras and who want to grow with us.
+			<iframe class="mt-4" width="560" height="315" src="https://www.youtube.com/embed/s10qsnqs0oM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width: 100%"></iframe>
+			p.mt-4.fs-16 A technology company with units in São José (SC), Santa Rita do Sapucaí (MG) and Manaus (AM) and we have one of the largest research and innovation centers in Latin America, with more than 300 professionals working to develop products and solutions that deliver technology, quality and innovation with simplicity.
+
+.solution-3--2.indexSection--5.pt-section
+	.container
+		.solution-3--2__slider.mt-3
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						.blog
+							.blog__link
+								.blog__img
+									img.lazyload.blur-up(data-src="/images/index/5.jpg", alt="")
+								.blog__caption.mt-3.text-center
+									h4.cardTitle Join the Intelbras team
+									p.cardContent.mt-3.fs-16 Find out more about us and be part of one of the best companies to work for in Brazil.
+					.swiper-slide
+						.blog
+							.blog__link
+								.blog__img
+									img.lazyload.blur-up(data-src="/images/index/6.jpg", alt="")
+								.blog__caption.mt-3.text-center
+									h4.cardTitle More security for your business
+									p.cardContent.mt-3.fs-16 Protect your employees and assets with our security solutions. Protect your employees and assets with our security solutions. 
+					.swiper-slide
+						.blog
+							.blog__link
+								.blog__img
+									img.lazyload.blur-up(data-src="/images/index/6.jpg", alt="")
+								.blog__caption.mt-3.text-center
+									h4.cardTitle More security for your business
+									p.cardContent.mt-3.fs-16 Protect your employees and assets with our security solutions. Protect your employees and assets with our security solutions. 
+			.swiper-pagination-custom.mt-3
+.career-work-with-us-section.pd-section
+	.container
+		.section__blockTitle.text-center
+			h2.sectionTitle Know some benefits we offer here
+		.solution-1--6__caption.solution-1--6__slider.mt-4
+			.swiper-container
+				.swiper-wrapper
+					- for(let i = 1;i <16;i++)
+						.swiper-slide
+							img(src="/images/career-visit/"+i+".png", alt="" style="max-width:85px; display:block; margin: 0 auto")
+							h4.fs-16.text-center.fw-300.mt-3 Lorem ipsum dolor sit
+			.swiper-prev--custom.swiper-nav-button
+				span.fal.fa-chevron-left
+			.swiper-next--custom.swiper-nav-button
+				span.fal.fa-chevron-right
+			.swiper-pagination-custom.mt-3

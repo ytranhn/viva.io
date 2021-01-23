@@ -1,7 +1,25 @@
+@import '_abstracts/mixins';
 @import '_abstracts/variables';
+@import '_abstracts/animations';
 @import '_abstracts/fonts';
 
 @import '_globals/reboot';
 @import '_globals/grid';
 @import '_globals/layouts';
 @import '_globals/utilities';
+
+@import '_components/forms';
+@import '_components/buttons';
+
+@import '_globals/header';
+@import '_globals/footer';
+@import '_pages/index';
+@import '_pages/product-categories';
+@import '_pages/product-sub-categories';
+@import '_pages/solution-1';
+@import '_pages/solution-2';
+@import '_pages/form-filter';
+@import '_pages/contact';
+@import '_pages/about-us';
+@import '_pages/career';
+@import '_pages/blog';

@@ -1,0 +1,28 @@
+.solution-2--1.solution-2-section.pt-section
+	.container
+		.section__blockTitle.text-center
+			h2.sectionTitle Intelbras develops complete solutions to meet the needs of the Brazilian provider market.
+		.section__blockTitle.pt-section
+			h2.sectionTitle Learn about our solutions
+		.solution-2__caption.row.mt-3.productCategories
+			- for(let i = 1;i<5;i++)
+				.col-lg-3.col-6
+					.category
+						a.category__link(href="#")
+							.category__img
+								img(src="/images/solution-2/"+i+".png", alt="")
+							.category__caption.text-center.pt-2
+								-if(i==1)
+									h4.cardTitle Communication
+										span.fal.fa-chevron-right
+								-if(i==2)
+									h4.cardTitle Networks
+										span.fal.fa-chevron-right
+								-if(i==3)
+									h4.cardTitle Safety
+										span.fal.fa-chevron-right
+								-if(i==4)
+									h4.cardTitle Energy
+										span.fal.fa-chevron-right
+			
+			

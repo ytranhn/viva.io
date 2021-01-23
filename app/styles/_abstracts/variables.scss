@@ -1,3 +1,15 @@
 :root {
-  --main: red;
+	--main: #00a335;
+	--white: #ffffff;
+	--black: #000000;
+	--text: #2b2b2b;
+	--alert: #842029;
 }
+
+$color: (
+	main: #00a335,
+	white: #ffffff,
+	black: #000000,
+	text: #2b2b2b,
+	alert: #842029,
+);

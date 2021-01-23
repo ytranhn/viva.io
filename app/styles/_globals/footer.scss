@@ -1,0 +1,103 @@
+.footer__nav {
+	list-style-type: none;
+	padding-left: 0;
+	.isSVG {
+		display: inline-block;
+		svg {
+			border-radius: 50%;
+			border: 1px solid map-get($color, text);
+		}
+	}
+	a {
+		display: block;
+		padding: 1.2rem 0;
+		color: map-get($color, text);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.footer__extra-infos {
+	border-top: 1px solid darken(map-get($color, white), 12%);
+	.footer__nav {
+		display: flex;
+		flex-wrap: wrap;
+		a {
+			padding: 12px 0;
+		}
+		li {
+			+ li {
+				margin-left: 24px;
+			}
+		}
+	}
+}
+.footer__help {
+	background-color: map-get($color, main);
+	.card__url {
+		display: flex;
+		align-items: center;
+	}
+	.card__img {
+		-ms-flex: 0 0 55px;
+		flex: 0 0 55px;
+		max-width: 55px;
+		img {
+			max-width: 55px;
+		}
+	}
+	.card__caption {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		max-width: 100%;
+		padding-left: 20px;
+		h4 {
+			color: map-get($color, white);
+			span {
+				margin-left: 10px;
+				font-size: 12px;
+			}
+		}
+	}
+	.footer__helpTitle {
+		color: map-get($color, white);
+		margin-right: 30px;
+	}
+	.swiper-pagination-custom {
+		margin-top: 15px;
+		.swiper-pagination-bullet {
+			background-color: map-get($color, white);
+		}
+		.swiper-pagination-bullet-active {
+			background-color: map-get($color, white);
+		}
+	}
+	@media (min-width: 768px) {
+		.swiper-pagination-custom {
+			display: none;
+		}
+	}
+	@media (max-width: 767.98px) {
+		.card__url {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.card__img {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.card__caption {
+			text-align: center;
+			padding-left: 0;
+		}
+		.footer__helpTitle {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+}

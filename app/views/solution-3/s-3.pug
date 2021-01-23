@@ -1,0 +1,29 @@
+.indexSection--2.pt-section
+	.container
+		.section__blockTitle
+			h2.sectionTitle Application Scenarios
+		.section__slider.mt-4
+			.swiper-container
+				.swiper-wrapper
+					-for(let i = 1; i<8; i++)
+						.swiper-slide
+							.card
+								a.card__link(href="#")
+									.card__img
+										img(src="/images/solution-3/slide-"+i+".png", alt="")
+									.card__caption.mt-3
+										-if(i == 1)
+											h4.cardTitle Agribusiness
+										-if(i == 2)
+											h4.cardTitle Supermarkets
+										-if(i == 3)
+											h4.cardTitle Barber Shop
+										-if(i == 4)
+											h4.cardTitle Coworking
+										-if(i == 5)
+											h4.cardTitle Medical Clinics
+										-if(i == 6)
+											h4.cardTitle Restaurants
+										-if(i == 7)
+											h4.cardTitle Bakeries
+				.swiper-pagination-custom.mt-3

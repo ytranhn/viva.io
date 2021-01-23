@@ -1,0 +1,16 @@
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "blog-page"
+	- pageTitle = "Blog - Start"
+
+block main
+	.pageContainer
+		.form-filter-simple-banner.about-us-simple-banner
+			.img
+				img.object-cover(src="/images/banners/about-us.png")
+			.caption.text-center
+				.container
+					h1.fs-22.fw-300 Intelbras
+					p.fs-20.mt-1 Always close to care, connect, communicate and transform
+		include views/blog-start/b-1

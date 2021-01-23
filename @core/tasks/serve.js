@@ -64,7 +64,7 @@ export const serve = () => {
 		return renderHTML(glob);
 	});
 
-	watch(['app/views/**/**.pug', '!app/views/_**/**.pug']).on(
+	watch(['app/views/**/**.pug', '!app/views/_**/**.pug'], series(injectTask)).on(
 		'change',
 		(path, stats) => {
 			console.log(`Files changed: '${path}'`);

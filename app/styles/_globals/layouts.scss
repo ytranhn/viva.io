@@ -1,0 +1,245 @@
+body {
+	background-color: rgb(238, 238, 238);
+}
+img {
+	max-width: 100%;
+}
+.pageContainer {
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: map-get($color, white);
+}
+.container--custom {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+.cardTitle {
+	@extend .fw-300;
+	@extend .fs-20;
+	color: #2b2b2b;
+	transition: all 0.3s ease;
+	span {
+		font-size: 12px;
+		color: map-get($color, main);
+		margin-left: 10px;
+		transition: all 0.3s ease;
+	}
+}
+.cardContent {
+	@extend .fw-300;
+	@extend .fs-16;
+	color: #2b2b2b;
+}
+
+.sectionTitle {
+	font-weight: 300;
+	font-size: 2.6rem;
+	@media (min-width: 768px) {
+		font-size: 2.8rem;
+	}
+	@media (min-width: 1025px) {
+		font-size: 3.4rem;
+		text-align: center;
+	}
+	@media (min-width: 1200px) {
+		font-size: 4rem;
+	}
+}
+.sectionLink {
+	color: map-get($color, main);
+	font-weight: 600;
+	font-size: 16px;
+	text-decoration: none;
+	.sectionLink__text {
+		transition: all 0.3s ease;
+		border-bottom: 1px solid transparent;
+	}
+	.sectionLink__icon {
+		font-size: 14px;
+		margin-left: 15px;
+	}
+}
+
+.swiper-pagination-custom {
+	position: static;
+	width: 100%;
+	text-align: center;
+	.swiper-pagination-bullet {
+		margin: 0 10px;
+		width: 5px;
+		height: 5px;
+		box-shadow: 0 0 10px rgba(map-get($color, black), 0.15);
+		background-color: map-get($color, black);
+		border-radius: 50%;
+		&:active,
+		&:hover,
+		&:focus {
+			outline: none;
+		}
+		@media (max-width: 1199.98px) {
+			margin: 0 7px;
+		}
+		@media (max-width: 767.98px) {
+			margin: 0 4px;
+		}
+	}
+}
+.swiper-nav-button {
+	position: absolute;
+	top: 50%;
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px 0 hsla(0, 0%, 65%, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-color: map-get($color, white);
+	z-index: 5;
+	visibility: hidden;
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+.swiper-prev--custom {
+	left: 0;
+}
+.swiper-next--custom {
+	right: 0;
+}
+.dropdown {
+	.dropdown__list {
+		display: none;
+	}
+	.dropdown__label {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		.dropdown__icon {
+			margin-left: auto;
+			transition: all 0.3s ease;
+			color: map-get($color, main);
+			font-weight: 900;
+			font-size: 14px;
+		}
+		.dropdown__text {
+			transition: all 0.3s ease;
+		}
+	}
+}
+
+.pagination {
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+		list-style-type: none;
+	}
+	&__link {
+		font-size: 1.6rem;
+		color: map-get($color, text);
+		border-bottom: 1px solid transparent;
+		display: block;
+		padding: 0 5px;
+		margin: 0 5px;
+		span.fal {
+			font-size: 14px;
+		}
+	}
+	&__item {
+		&.active,
+		&:hover {
+			.pagination__link {
+				font-weight: 600;
+				color: map-get($color, main);
+				border-bottom: 1px solid map-get($color, main);
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.section__blockTitle {
+		position: relative;
+	}
+	.sectionLink {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media (min-width: 1025px) {
+	.sectionLink {
+		&:hover {
+			text-decoration: none;
+			color: map-get($color, main);
+			.sectionLink__text {
+				border-bottom: 1px solid map-get($color, main);
+			}
+		}
+	}
+	.swiper-nav-button {
+		visibility: visible;
+	}
+}
+
+.form-filter-simple-banner {
+	position: relative;
+	.img {
+		position: relative;
+		height: 100px;
+		width: 100%;
+		overflow: hidden;
+		background-image: url(/images/banners/form-filter.png);
+		background-position: -130px 0 !important;
+	}
+	.caption {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		color: white;
+		h1 {
+			font-size: 3.2rem;
+		}
+	}
+}
+.contact-simple-banner {
+	.img {
+		height: 165px;
+		@media (min-width: 1025px) {
+			height: 245px;
+		}
+	}
+	.caption {
+		h1 {
+			font-size: 32px;
+		}
+		@media (min-width: 1025px) {
+			h1 {
+				font-size: 3vw;
+			}
+		}
+	}
+}
+.about-us-simple-banner {
+	@extend .contact-simple-banner;
+	.img {
+		background-image: url(/images/banners/about-us.png);
+	}
+}
+.litepicker .container__days .day-item.is-end-date {
+	background-color: map-get($color, main);
+}

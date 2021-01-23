@@ -53,12 +53,10 @@ class HttpClient {
 }
 
 export class HTTP {
-
-
 	/**
 	 * @param {string} url - The url you will use to request to get data from backend
 	 * @param {Object} options The options of request
-	 * 
+	 *
 	 * {
 	 *
 	 * * mode: 'same-origin',
@@ -74,9 +72,9 @@ export class HTTP {
 	 * * },
 	 *
 	 * * redirect: 'follow',
-	 * 
+	 *
 	 * * referrerPolicy: 'same-origin'
-	 * 
+	 *
 	 * }
 	 * @param {string} options.mode - no-cors, *cors, same-origin
 	 * @param {string} options.cache - *default, no-cache, reload, force-cache, only-if-cached
@@ -89,13 +87,12 @@ export class HTTP {
 		return HttpClient.request('get', url, options);
 	}
 
-
 	/**
 	 * @param {string} url - The url you will use to request to get data from backend
 	 * @param {Object} options The options of request
-	 * 
+	 *
 	 * {
-	 * 
+	 *
 	 * * body: JSON.stringify(data),
 	 *
 	 * * mode: 'same-origin',
@@ -111,9 +108,9 @@ export class HTTP {
 	 * * },
 	 *
 	 * * redirect: 'follow',
-	 * 
+	 *
 	 * * referrerPolicy: 'same-origin'
-	 * 
+	 *
 	 * }
 	 * @param {string} options.body - data is depend on you
 	 * @param {string} options.mode - no-cors, *cors, same-origin
@@ -127,13 +124,12 @@ export class HTTP {
 		return HttpClient.request('post', url, options);
 	}
 
-
 	/**
 	 * @param {string} url - The url you will use to request to get data from backend
 	 * @param {Object} options The options of request
-	 * 
+	 *
 	 * {
-	 * 
+	 *
 	 * * body: JSON.stringify(data),
 	 *
 	 * * mode: 'same-origin',
@@ -149,9 +145,9 @@ export class HTTP {
 	 * * },
 	 *
 	 * * redirect: 'follow',
-	 * 
+	 *
 	 * * referrerPolicy: 'same-origin'
-	 * 
+	 *
 	 * }
 	 * @param {string} options.body - data is depend on you
 	 * @param {string} options.mode - no-cors, *cors, same-origin
@@ -165,15 +161,14 @@ export class HTTP {
 		return HttpClient.request('put', url, options);
 	}
 
-
 	/**
 	 * @param {string} url - The url you will use to request to get data from backend
 	 * @param {Object} options The options of request
-	 * 
+	 *
 	 * {
-	 * 
+	 *
 	 * * method: 'get',
-	 * 
+	 *
 	 * * body: JSON.stringify(data),
 	 *
 	 * * mode: 'same-origin',
@@ -189,9 +184,9 @@ export class HTTP {
 	 * * },
 	 *
 	 * * redirect: 'follow',
-	 * 
+	 *
 	 * * referrerPolicy: 'same-origin'
-	 * 
+	 *
 	 * }
 	 * @param {string} options.method - 'get', 'post, 'put',...
 	 * @param {string} options.body - data is depend on you
