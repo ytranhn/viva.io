@@ -12,4 +12,4 @@ const cleanDist = () => {
 
 export const dev = series(cleanDist, copyPublic, core, main, render, serve);
 
-export const prod = series(cleanDist, copyPublic, core, main, render, serve);
+export const prod = series(cleanDist, copyPublic, core, main, render);
