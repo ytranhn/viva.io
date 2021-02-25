@@ -164,6 +164,20 @@
 			margin-right: 10px;
 		}
 	}
+	.product__link{
+		a{
+			color: map-get($color, main);
+			font-size: 1.4rem;
+			span.fal{
+				font-size: 1.2rem;
+			}
+			&:hover{
+				.txt{
+					border-bottom: 1px solid map-get($color, main)
+				}
+			}
+		}
+	}
 	.product__tags {
 		position: absolute;
 		top: 20px;

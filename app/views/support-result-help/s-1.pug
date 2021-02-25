@@ -1,0 +1,94 @@
+.form-filter-simple-banner
+	.img
+		img.object-cover(src="/images/banners/form-filter.png")
+	.caption.text-center
+		.container
+			h1.fs-22 Help and downloads
+			p.fs-16.mt-1 Always close to care, connect, communicate and transform
+.tab-container
+	.form-filter-navigation
+		.container
+			.tab-toggle-item-list.d-flex.justify-content-between
+				.tab-toggle-for(toggle-for="tab-1")
+					.tab-toggle-for-label Frequent questions
+				.tab-toggle-for(toggle-for="tab-2")
+					.tab-toggle-for-label Tutorial videos
+				.tab-toggle-for(toggle-for="tab-3")
+					.tab-toggle-for-label Files for download
+				.tab-toggle-for(toggle-for="tab-4")
+					.tab-toggle-for-label Step by Step
+	.form-filter.pd-section
+		.container
+			.tab-content(tab-id="tab-1")
+				.row 
+					.col-lg-3.mb-3 
+						.product.fullsize
+							.product__url.fullsize
+								.product__img
+									img.lazyload.blur-up(data-src="/images/ap_360.png")
+								.product__caption
+									p.product__subTitle.fs-16.mt-1 AP 360
+									h4.cardTitle.product__title.mt-1 Corporate Access Point with centralized management
+								.product__link.fs-14.mt-1.mb-2.fw-500
+									a(href="#")
+										span.txt Change product 
+										span.fal.fa-chevron-right.ml-1
+					.col-lg-9.mb-3 
+						.section__form.pb-4.no-bor
+							.row.align-items-center
+								.col-lg-4.mb-1
+									.form__group
+										select.form__control
+											option What kind of product?
+											option value a
+											option value a
+											option value a
+											option value a
+								.col-lg-1.mb-1.text-center.fs-22 or
+								.col-lg-7.mb-1
+									.form__search
+										.form__group
+											input.form__control(placeholder="Enter product name")
+										button.btn
+											span.far.fa-search
+							.section__dropdown.mt-3
+								.dropdown__heading Solução de Problemas
+									span.fal.fa-chevron-down
+								.dropdown__content.pt-1
+									.dropdown
+										.dropdown__label 
+											p.dropdown__text Instabilidade  ao tentar associar minha página do Facebook ao produto, o que fazer?
+												span.fal.fa-chevron-down
+										.dropdown__list.pb-3
+											p Resposta:
+											p O serviço Facebook WiFi, utilizado nos produtos HotSpot 300, AP 310, AP 360 e AP 1210AC está apresentando instabilidade ao associar a página comercial ao produto. A Intelbras já está ciente do problema e acionou o Facebook para normalizar o serviço.
+											p &nbsp;
+											p 
+												strong . Crie outra conta de usuário no Facebook;
+											p 
+												strong 1
+												| . Crie outra conta de usuário no Facebook;
+											p 
+												strong 2
+												| . Crie outra conta de usuário no Facebook;
+											p 
+												strong 3
+												| . Crie outra conta de usuário no Facebook;
+											p &nbsp;
+											p Caso o problema persista, entre em contato com o nosso suporte.
+											.row
+												.form__block.col-lg-5
+													.radio__list.d-flex
+														label.radio--custom.mr-3
+															input(type="radio", name="Subcategory" checked)
+															span Storage
+														label.radio--custom.mr-3
+															input(type="radio", name="Subcategory")
+															span Storage
+													.area__wrap.mb-2.mt-2
+														p.area__text
+															label.fw-200 Inserir comentário
+														textarea(name="", rows="2") 
+													.button
+														button.btn.btn--main Submit
+															span.btn__icon--right.fal.fa-chevron-right

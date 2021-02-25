@@ -1,0 +1,49 @@
+.section__dropdown{
+    .dropdown__heading{
+        background: map-get($color, silver);
+        padding: 13px 21px;
+        position: relative;
+        .fa-chevron-down{
+            transform: translateY(-50%) rotate(180deg)
+        }
+        &.hide{
+            .fa-chevron-down{
+                transform: translateY(-50%)
+            }
+        }
+    }
+    .fa-chevron-down{
+        color: var(--main);
+        font-size: 1.4rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 21px;
+    }
+    .dropdown{
+        border-bottom: 1px solid map-get($color, silver)
+    }
+    .dropdown__content{
+        padding: 0 21px;
+        .dropdown__label{
+            font-weight: 200;
+            position: relative;
+            padding: 13px 0;
+            span{
+                right: 0;
+            }
+            &.active{
+                span{
+                    transform: translateY(-50%) rotate(180deg)
+                }
+            }
+        }
+        .dropdown__list{
+            p{
+                font-weight: 300;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+            }
+        }
+    }
+}

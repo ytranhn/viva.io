@@ -1,0 +1,12 @@
+.block__pagination{
+    .pagination__item{
+        background: var(--main);
+        margin: 0 2px;
+        &>*{
+            padding: 6px 12px;
+            color: map-get($color, white);
+            display: block;
+        }
+        
+    }
+}

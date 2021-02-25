@@ -10,7 +10,9 @@
 .d-flex {
 	display: flex;
 }
-
+.fs-14{
+	font-size: 1.4rem;
+}
 .fs-16 {
 	font-size: 1.6rem;
 }
@@ -371,4 +373,8 @@
 	-moz-animation: fadeIn ease 3s;
 	-o-animation: fadeIn ease 3s;
 	-ms-animation: fadeIn ease 3s;
+}
+
+.justify-content-between{
+	justify-content: space-between;
 }

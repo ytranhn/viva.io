@@ -146,6 +146,26 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	);
 
+	const supportResultTechnicalSlider = new Swiper(
+		'.block__result--slider .swiper-container',
+		{
+			slidesPerView: 1,
+			spaceBetween: 20,
+			// pagination: {
+			// 	el: '.solution-3--2__slider .swiper-pagination-custom',
+			// 	clickable: true,
+			// 	type: 'bullets',
+			// 	dynamicMainBullets: true,
+			// },
+			centeredSlides: true,
+			breakpoints: {
+				768: {
+					slidesPerView: 4
+				},
+			},
+		},
+	);
+
 	const contactTab = new Tab('.tab-container');
 
 	if (document.querySelector('.date-picker')) {
@@ -162,4 +182,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.productList__filterClose').on('click', function () {
 		$('.productList__filter').removeClass('is-expanded');
 	});
+	// Support Result Help
+	$('.dropdown__heading').on('click', function(){
+		$(this).toggleClass('hide')
+		$(this).siblings().toggle()
+	})
+	// Header Search Toggle
+	$('header .header__search .text').on('click',function(){
+		$('header .header__search').addClass('active')
+		$('header .header__backdrop').show()
+	})
+	$('header .header__search .search-input-close, header .header__backdrop').on('click',function(){
+		$('header .header__search').removeClass('active')
+		$('header .header__backdrop').hide()
+	})
 });

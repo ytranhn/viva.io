@@ -90,3 +90,112 @@
 		list-style-type: none;
 	}
 }
+.blog__list{
+	.blog__item{
+		color: lighten(map-get($color, black), 25%);
+		border-bottom: 1px solid darken(map-get($color, white), 12%);
+		a{
+			color: var(--main);
+		}
+		.text{
+			border-bottom: 1px solid darken(map-get($color, white), 12%);
+		}
+		.detail{
+			.at-icon{
+				fill: map-get($color, white);
+				border: 0;
+				overflow: hidden;
+			}
+			.at-share-btn{
+				cursor: pointer;
+				margin: 0 5px 5px 0;
+				display: inline-block;
+				overflow: hidden;
+				border: 0;
+				text-decoration: none;
+				text-transform: none;
+				background-color: transparent;
+				color: inherit;
+				transition: all .2s ease-in-out;
+			}
+		}
+	}
+}
+.blog-related-news{
+	border-radius: 5px;
+	background: #d9e0e5;
+	.tab-heading{
+		background: darken(map-get($color, white), 5%);
+		color: var(--main);
+		.tab-toggle-for{
+    		padding: 10px 6px;
+			cursor: pointer;
+			&.active{
+				background: #d9e0e5;
+				border-radius: 5px 5px 0 0;
+			}
+		}
+	}
+	.tab-body{
+		padding: 10px;
+		font-size: 12px;
+		.news-item{
+			.img{
+				padding-right: 8px;
+			}
+			.text{
+				a{
+					color: lighten(map-get($color, black), 40%);
+					display: inline-block;
+					line-height: 1.1
+				}
+			}
+		}
+	}
+}
+.blog-social{
+	background: #f1f3f5;
+	padding: 20px;
+	border-radius: 5px;
+	h2{
+		color: var(--main);
+	}
+	p{
+		color: #4e768d;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	ul{
+		margin-top: 5px;
+		list-style: none;
+		padding-left: 0;
+		li{
+			margin-bottom: 5px;
+			a{
+				color: #8b8b8b;
+				font-size: 13px;
+				padding-top: 4px;
+			}
+			&.link-forum{
+				a{
+					background: url(../images/icon-forum.png) no-repeat left;
+					height: 23px;
+					display: block;
+					padding-left: 40px;
+				}
+			}
+			&.link-youtube{
+				a{
+					background: url(../images/icon-canal-youtube.png) no-repeat left;
+					height: 19px;
+					display: block;
+					padding-left: 40px;
+				}
+			}
+		}
+	}
+}
+.blog-result-title{
+	color: lighten(map-get($color, black), 40%);
+	font-weight: 600;
+}
