@@ -1,4 +1,11 @@
-header{
+.header__1{
+    @media(max-width: 767.98px){
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
     ul{
         list-style: none;
         padding-left: 0;
@@ -26,6 +33,9 @@ header{
         font-size: 1.5rem;
         font-weight: 300;
         padding: 5px 0 6px;
+        @media(max-width: 767.98px){
+            display: none;
+        }
         a{
             color: #5e6573;
         }
@@ -43,29 +53,29 @@ header{
             opacity: .7;
             }
         }
-        .header__language{
-            position: relative;
-            z-index: 555;
-            .header__language-list{
-                position: absolute;
-                top: calc(100% + 5px);
-                right: 0;
-                padding: 4px 16px 0;
-                border-radius: 3px;
-                border: 1px solid #ddd;
-                background-color: #fff;
-                z-index: 6;
-                .header__language-item{
-                    a{
-                        display: flex;
-                        padding: 10px 0;
-                        .text{
-                            margin-left: 5px;
-                        }
+    }
+    .header__language{
+        position: relative;
+        z-index: 555;
+        .header__language-list{
+            position: absolute;
+            top: calc(100% + 5px);
+            right: 0;
+            padding: 4px 16px 0;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            z-index: 6;
+            .header__language-item{
+                a{
+                    display: flex;
+                    padding: 10px 0;
+                    .text{
+                        margin-left: 5px;
                     }
-                    + .header__language-item{
-                        border-top: 1px solid #ddd
-                    }
+                }
+                + .header__language-item{
+                    border-top: 1px solid #ddd
                 }
             }
         }
@@ -77,26 +87,81 @@ header{
             width: 100%;
             height: 100%;
         }
+        @media(max-width: 767.98px){
+            width: 83px;
+            height: 48px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);        
+        }
     }
     .header__main{
         border-bottom: 1px solid map-get($color, silver);
         position: relative;
         height: 55px;
+        @media(max-width: 767.98px){
+            align-items: center;
+        }
     }
     .header__main-menu{
         height: 100%;
-        ul{
-            a{
-                color: #2b2b2b;
-                padding: 15px 20px 15px 0;
-                height: 55px;
-                display: block;
-                font-size: 1.6rem;
+        .toggle-mobile-btn{
+            border: 0;
+            display: flex;
+            align-items: center;
+            background: none;
+            outline: none;
+            .icon-close{
+                display: none;
+            }
+            &.active{
                 span{
-                    margin-left: 10px;
-                    font-size: 1.2rem;
-                    color: var(--main)
+                    display: none;
                 }
+                .icon-close{
+                    display: block;
+                }
+            }
+        }
+        .toggle__menu-wrap{
+            &>ul>li>a{
+                height: 55px;
+            }
+            .header__helper-extra-menu{
+                border-top: 1px solid #f1f1f1;
+                margin: 0 10px;
+                padding: 0;
+            }
+            .header__language{
+                padding: 0 10px;
+                .header__language-list{
+                    left: 10px;
+                    width: 150px;
+                    a{
+                        color: #5e6573;
+                    }
+                }
+            }
+            @media(min-width: 768px){
+                .header__helper-extra-menu,.header__language{
+                    display: none!important;
+                }
+            }
+        }
+        ul{
+            li{
+                a{
+                    color: #2b2b2b;
+                    padding: 18px 20px 15px 0;
+                    display: block;
+                    span{
+                        margin-left: 10px;
+                        font-size: 1.2rem;
+                        color: var(--main)
+                    }
+                }
+
             }
             .has-mega{
                 .mega__wrap{
@@ -105,10 +170,19 @@ header{
                     background: #fff;
                     width: 1440px;
                     left: 50%;
+                    z-index: 555;
                     transform: translateX(-50%);
+                    box-shadow: 0 2px 4px map-get($color, silver);
+                    border-top: 1px solid map-get($color, silver);
                     display: none;
                     .bg-gray{
                         background: #f5f5f5;
+                    }
+                    .mega__back-link{
+                        display: none;
+                    }
+                    @media(max-width: 1440px){
+                        width: 100vw;
                     }
                     &:before{
                         content: '';
@@ -119,6 +193,9 @@ header{
                         top: 0;
                         position: absolute;
                         z-index: -1;
+                        @media(max-width: 1400px){
+                            width: 250px;
+                        }
                     }
                     .mega__row{
                         &>div{
@@ -128,28 +205,262 @@ header{
                             padding-left: 0;
                         }
                     }
+                    .mega__link{
+                        a{
+                            color: var(--main);
+                        }
+                    }
+                    .mega__extra-menu{
+                        margin-bottom: 2rem;
+                        h2{
+                        }
+                        ul{
+                            a{
+                                font-size: 1.5rem;
+                                padding: 10px 0;
+                                height: auto;
+                            }
+                        }
+                    }
                     &.mega__1{
                         .mega__left{
-                            .mega__extra-menu{
-                                margin-bottom: 2rem;
-                                h2{
+                        }
+                        .mega__right{
+                            .product{
+                                .product__url{
+                                    display: flex;
+                                    height: auto!important;
+                                    align-items: center;
                                 }
-                                ul{
+                                .product__caption{
+                                    width: 50%;
+                                    max-width: 50%;
+                                    flex: 0 0 50%;
+                                    h4{
+                                        font-size: 1.6rem;
+                                    }
+                                }
+                                .product__img2{
+                                    width: 50%;
+                                    max-width: 50%;
+                                    flex: 0 0 50%;
+                                }
+                            }
+                        }
+                    }
+                    &.mega__2{
+                        .mega__2-item{
+                            a{
+                                padding-top: 0;
+                                &:hover{
+                                    .img{
+                                        position: relative;
+                                        &::before{
+                                            content: '';
+                                            height: 3px;
+                                            width: 100%;
+                                            background: var(--main);
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .text_bottom{
+                            a{
+                                color: var(--main)
+                            }
+                        }
+                        .mega__right{
+                            .mega__2-item{
+                                a{
+                                    padding-left: 15px;
+                                }
+                            }
+                        }
+                    }
+                    &.mega__3{
+                        .mega__service{
+                            span{
+                                margin-left: 0;
+                            }
+                            .text{
+                                color: #5e6573;
+                                font-size: 1.5rem;
+                                margin: 0 1rem;
+                            }
+                        }
+                        .mega__right{
+                            padding-left: 5rem;
+                            ul{
+                                li{
+                                    + li{
+                                        border-top: 1px solid #d9d9d9
+                                    }
                                     a{
-                                        font-size: 1.5rem;
-                                        padding: 10px 0;
-                                        height: auto;
+                                        color: var(--main)
                                     }
                                 }
                             }
                         }
                     }
-                }
-                &:hover{
-                    .mega__wrap{
-                        display: block;
+                    &.mega__4{
+                        .mega__right{
+                            padding-left: 5rem;
+                        }
                     }
                 }
+                @media(min-width: 768px){
+                    &:hover{
+                        .mega__wrap{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        @media(max-width: 767.98px){
+            height: auto;
+            .toggle__menu-wrap{
+                display: none;
+                &.show{
+                    display: block;
+                    position: fixed;
+                    z-index: 888;
+                    top: 55px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 55px);
+                    background: #fff;
+                }
+                >ul{
+                    padding: 0 10px;
+                    display: block;
+                    >li>a{
+                        position: relative;
+                        span{
+                            position: absolute;
+                            right: 15px;
+                            top: 50%;
+                            transform: translateY(-50%) rotate(-90deg)
+                        }
+                    }
+                    .has-mega{
+                        .mega__wrap{
+                            overflow-y: auto;
+                            top: 0;
+                            box-shadow: none;
+                            padding: 2rem 0;
+                            max-height: 100%;
+                            &:before{
+                                display: none;
+                            }
+                            .mega__back-link{
+                                display: block;
+                                padding: 1rem 0;
+                                margin-bottom: 2rem;
+                                border-bottom: 1px solid #f5f5f5;
+                                span.fal{
+                                    font-size: 1.3rem;
+                                    color: var(--main)
+                                }
+                            }
+                            .mega__row{
+                                &>div{
+                                    padding: 0!important;
+                                }
+                            }
+                            .mega__right{
+                                background: none;
+                            }
+                            &.show{
+                                display: block;
+                            }
+                            &.mega__1{
+                                .mega__right{
+                                    display: none;
+                                }
+                            }
+                            &.mega__2{
+                                .mega__2-item{
+                                    .img{
+                                        display: none;
+                                    }
+                                    .text{
+                                        font-size: 1.8rem;
+                                        position: relative;
+                                        span{
+                                            position: absolute;
+                                            top: 50%;
+                                            right: 0;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+                                }
+                                .mega__right{
+                                    .mega__2-item{
+                                        a{
+                                            padding-left: 0;
+                                            .text{
+                                                font-size: 1.6rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.mega__3{
+                                h3{
+                                    margin-bottom: 1rem;
+                                }
+                                .mega__service{
+                                    position: relative;
+                                    padding: 1.5rem 0;
+                                    .isvg{
+                                        display: none;
+                                    }
+                                    .text{
+                                        margin-left: 0;
+                                    }
+                                    .fal{
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 20px;
+                                        transform: translateY(-50%)
+                                    }
+                                }
+                                .mega__right{
+                                    margin-top: 2rem;
+                                    ul{
+                                        a{
+                                            position: relative;
+                                            span{
+                                                position: absolute;
+                                                right: 20px;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.mega__4{
+                                .mega__extra-menu{
+                                    margin-bottom: 3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media(min-width: 768px){
+            .toggle-mobile-btn{
+                display: none;
+            }
+            >ul{
+                display: flex!important;
             }
         }
     }
@@ -217,6 +528,16 @@ header{
             }
             .text{
                 display: none;
+            }
+        }
+        @media(max-width: 767.98px){
+            height: auto;
+            border-bottom: 0;
+            .text{
+                opacity: 0;
+            }
+            .search-input-close{
+                height: auto;
             }
         }
     }

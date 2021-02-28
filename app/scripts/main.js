@@ -183,17 +183,78 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.productList__filter').removeClass('is-expanded');
 	});
 	// Support Result Help
-	$('.dropdown__heading').on('click', function(){
+	$('.dropdown__heading').on('click', function () {
 		$(this).toggleClass('hide')
 		$(this).siblings().toggle()
 	})
 	// Header Search Toggle
-	$('header .header__search .text').on('click',function(){
+	$('.header__1 .header__search .text').on('click', function () {
 		$('header .header__search').addClass('active')
 		$('header .header__backdrop').show()
 	})
-	$('header .header__search .search-input-close, header .header__backdrop').on('click',function(){
+	$('.header__1 .header__search .search-input-close, header .header__backdrop').on('click', function () {
 		$('header .header__search').removeClass('active')
 		$('header .header__backdrop').hide()
+	})
+	// Header Main Toggle
+	$('.header__1 .header__main-menu .toggle-mobile-btn').on('click', function () {
+		$(this).siblings().toggleClass('show')
+		$(this).toggleClass('active')
+	})
+	$('.header__1 .header__main-menu .toggle__menu-wrap>ul>li>a').on('click', function (e) {
+		e.preventDefault()
+		$(this).siblings().addClass('show')
+	})
+	$('.header__1 .mega__back-link').on('click', function () {
+		$(this).parents('.mega__wrap').removeClass('show')
+	})
+
+	// Header 2 search toggle
+	$('.header__2 .header__search button').on('click', function () {
+		if (!$(this).siblings().val()) {
+			$(this).parent().toggleClass('active')
+		}
+		else {
+			console.log('event')
+		}
+	})
+	$('.header__2 .header__btn').on('click', function () {
+		if ($(this).siblings('.header__main').is(':hidden')) {
+			$(this).siblings('.header__main').slideDown()
+		}
+		else {
+			$(this).siblings('.header__main').slideUp()
+		}
+	})
+
+	// Scroll Sticky
+	if ($('#blog-page .blog__newsletter').length) {
+		var blogNewsLetterOffset = $("#blog-page .blog__newsletter").offset().top
+	}
+	function scrollStiky() {
+		var scroll = $(window).scrollTop()
+		if (scroll > blogNewsLetterOffset) {
+			$("#blog-page .blog__newsletter").css({
+				"position": "fixed",
+				"top": "78px",
+				"left": 0,
+				"width": "100%"
+			})
+		}
+		else {
+			$("#blog-page .blog__newsletter").css({
+				"position": "static"
+			})
+		}
+	}
+	$(window).on('scroll', function () {
+		if ($('#blog-page').length) {
+			scrollStiky()
+		}
+	})
+	$(document).on('ready', function () {
+		if ($('#blog-page').length) {
+			scrollStiky()
+		}
 	})
 });

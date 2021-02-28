@@ -6,6 +6,11 @@ block var
 
 block main
 	.pageContainer
+		.blog__newsletter.d-flex.align-items-center.justify-content-center
+			p.text.my-1 Sign up to receive news by email:
+			.newsletter__form.my-1 
+				input(type="text" placeholder="Type your e-mail")
+				button(type="submit") Sign up
 		.form-filter-simple-banner.about-us-simple-banner
 			.img
 				img.object-cover(src="/images/banners/about-us.png")

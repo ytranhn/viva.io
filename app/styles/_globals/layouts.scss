@@ -4,6 +4,61 @@ body {
 img {
 	max-width: 100%;
 }
+@media(max-width: 767.98px){
+	main{
+		padding-top: 55px;
+	}
+}
+#blog-page{
+	main{
+		padding-top: 78px;
+		@media(max-width: 767.98px){
+			padding-top: 128.39px;
+		}
+	}
+	.blog__newsletter{
+		z-index: 888;
+		background: url(../images/bg-novidades.png) no-repeat, url(../images/bg-banner.jpg) repeat;
+		width: 100%;
+		padding: 15px 20px;
+		background-size: cover;
+		flex-wrap: wrap;
+		@media(max-width: 767.98px){
+			top: 128.38px!important;
+		}
+		.text{
+			text-shadow: 1px 1px 1px #000000;
+			font-size: 18px;
+			color: #fff;
+		}
+		.newsletter__form{
+			margin-left: 1rem;
+			margin-right: 1rem;
+			border-radius: 5px;
+			background: #ffffff;
+			border: 0;
+			display: block;
+			padding: 6px 10px 6px 10px;
+			input, button{
+				border-radius: 4px !important;
+				font-size: 12px !important;
+				margin-right: 8px;
+				border: 1px solid #CCC;
+				padding: 5px 15px;
+				outline: none;
+				background: #fff;
+			}
+			button{
+				margin-right: 0;
+			}
+		}
+	}
+}
+@media (max-width: 767.98px){
+	.hidden-xs {
+		display: none !important;
+	}
+}
 .pageContainer {
 	max-width: 1440px;
 	margin-left: auto;

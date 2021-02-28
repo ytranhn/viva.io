@@ -11,7 +11,10 @@ html(lang="en")
 		title=pageTitle
 	body(id=bodyClass)
 		block header
-			include header
+			if bodyClass == "blog-page"
+				include header2
+			else
+				include header
 		main
 			block main
 			#page-verify(data-class=bodyClass)

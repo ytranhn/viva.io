@@ -68,3 +68,14 @@
 		color: map-get($color, white);
 	}
 }
+.btn--white--outline {
+	background-color: transparent;
+	color: map-get($color, white);
+	border: 1px solid map-get($color, white);
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken(map-get($color, white), 5%);
+		color: map-get($color, dark-gray);
+	}
+}

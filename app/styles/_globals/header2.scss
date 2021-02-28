@@ -1,0 +1,115 @@
+.header__2{
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 6px -2px 14px #4c4c4c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 899;
+    .flex-wrap{
+        flex-wrap: wrap;
+    }
+    .header__main{
+        margin-left: auto;
+        ul{
+            list-style: none;
+            padding-left: 0;
+            li{
+                margin-right: 4rem;
+                a{
+                    color: #808080;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        @media(max-width: 767.98px){
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 65px;
+            background: #fff;
+            width: calc(100% - 20px);
+            margin: 0 10px;
+            ul{
+                display: block;
+                li{
+                    border-top: 1px solid #d9d9d9;
+                    margin-right: 0;
+                    a{
+                        color: var(--main);
+                        padding: 1rem;
+                        display: block;
+                        font-weight: 300;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+        @media(min-width: 768px){
+            display: flex!important;
+        }
+    }
+    .header__btn{
+        width: 20%;
+        margin: 10px 0 10px auto;
+        color: #33af2e;
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 0;
+        background: url(../images/menu-smart.png) no-repeat right center !important;
+        height: 22px;
+        font-size: 16px;
+        display: none;
+        @media(max-width: 767.98px){
+            display: block;
+        }
+    }
+    .header__search{
+        background: #f1f3f5;
+        border: 1px solid #e1e1e1;
+        padding: 3px 3px 3px 3px;
+        border-radius: 5px;
+        /* width: 100%; */
+        color: #b2b2b2;
+        font-size: 15px;
+        button{
+            background: url(../images/icon-search.png) center no-repeat #54b247;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 0;
+            width: 34px;
+            height: 30px;
+            float: right;
+            cursor: pointer;
+            outline: none;
+        }
+        input{
+            background: none;
+            outline: none;
+            border: 0;
+            padding-left: 0;
+            padding-right: 0;
+            width: 0;
+        }
+        &.active{
+            input{
+                padding-left: 15px;
+                width: 200px;
+            }
+        }
+        @media(max-width: 767.98px){
+            flex: 0 0 100%;
+            width: 100%;
+            margin-top: 1rem;
+            input{
+                width: 100%;
+                padding: 0 1rem;
+            }
+        }
+    }
+}
